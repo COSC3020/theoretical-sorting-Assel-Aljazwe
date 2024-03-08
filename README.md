@@ -17,3 +17,44 @@ Also give a theoretical argument for why X could or could not be correct, based
 on the complexity of the general sorting problem we covered in class.
 
 Add your answers to this markdown file.
+
+# Verification of Theoretical Sorting Algorithm Claim
+
+## Empirical Testing Method
+
+To empirically test the claim of an O(n) comparison-based sorting algorithm, the following method will be employed:
+
+1. **Generate Test Cases:** Various lists will be prepared, including:
+   - Randomly ordered lists.
+   - Lists sorted in ascending and descending order.
+   - Lists with all elements the same.
+   - Lists of different sizes, from small to large.
+
+2. **Measure Performance:** The sorting algorithm will be used to sort these lists, measuring:
+   - Time taken to sort.
+   - Number of comparisons made, if possible.
+
+3. **Analyze Results:** Performance across different lists and sizes will be analyzed to determine if:
+   - Time complexity appears to be O(n).
+   - Performance degradation is observed with larger sizes, contradicting O(n) complexity.
+
+4. **Benchmarking:** Performance will be compared against established algorithms (e.g., quicksort, mergesort) for context.
+
+5. **Statistical Analysis:** We'll use a basic method called regression analysis to figure out if the sorting is as quick as they say it is by looking at the results from our tests.
+
+### Expected Results
+
+- Linear growth in sorting time with list size increase, without significant variation, would support the O(n) claim.
+- Significant deviations would suggest the claim might not hold under all conditions.
+
+## Theoretical Argument
+
+Given the established complexity bounds for comparison-based sorting algorithms, the claim of O(n) time complexity for sorting arbitrary elements is examined closely by the following:
+
+- **Information-Theoretic Lower Bound:** The minimum complexity for comparison-based sorting is O(n log n), due to the many possible ways to arrange the items (n! ways) and to sort them, we need to figure out the right way. Achieving sorting in fewer steps would contradict this bound, suggesting the algorithm either:
+  - Does not rely solely on comparisons.
+  - Or the claim is incorrect.
+
+To summarize, while the empirical approach can provide practical insights into the algorithm's performance, the theoretical framework of algorithmic design and computational theory indicate that a comparison-based sorting algorithm achieving $O(n)$ time complexity for arbitrary datasets contradicts the established principles in computational theory.
+
+
