@@ -20,7 +20,7 @@ Add your answers to this markdown file.
 
 # Verification of Theoretical Sorting Algorithm Claim
 
-## Empirical Testing Method
+## Experimental/Practical Verification Method
 
 To empirically test the claim of an $O(n)$ comparison-based sorting algorithm, the following method will be used:
 
@@ -55,6 +55,6 @@ Given the established complexity bounds for comparison-based sorting algorithms,
   - Does not rely solely on comparisons.
   - Or the claim is incorrect.
 
-To summarize, while the empirical approach can provide practical insights into the algorithm's performance, the theoretical framework of algorithmic design and computational theory indicate that a comparison-based sorting algorithm achieving $O(n)$ time complexity for arbitrary datasets contradicts the established principles in computational theory.
+To summarize, while the experimental approach can provide practical insights into the algorithm's performance, the theoretical framework of algorithmic design and algorithmic theory indicate that a comparison-based sorting algorithm achieving $O(n)$ time complexity for arbitrary datasets contradicts the established principles in algorithmic theory.
 
 
