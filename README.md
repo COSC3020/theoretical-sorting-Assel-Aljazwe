@@ -51,7 +51,7 @@ To empirically test the claim of an $O(n)$ comparison-based sorting algorithm, t
 
 Given the established complexity bounds for comparison-based sorting algorithms, the claim of $O(n)$ time complexity for sorting arbitrary elements is examined closely by the following:
 
-- **Information-Theoretic Lower Bound:** The minimum complexity for comparison-based sorting is $O(n log n)$, due to the many possible ways to arrange the items ($n!$ ways) and to sort them, we need to figure out the right way. Achieving sorting in fewer steps would contradict this lower bound, suggesting the algorithm either:
+- **Information-Based Lower Bound:** The minimum complexity for comparison-based sorting is $O(n log n)$, due to the many possible ways to arrange the items ($n!$ ways) and to sort them, we need to figure out the right way. Achieving sorting in fewer steps would contradict this lower bound, suggesting the algorithm either:
   - Does not rely solely on comparisons.
   - Or the claim is incorrect.
 
