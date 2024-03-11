@@ -24,37 +24,35 @@ Add your answers to this markdown file.
 
 To empirically test the claim of an $O(n)$ comparison-based sorting algorithm, the following method will be used:
 
-1. **Generate Test Cases:** Various lists will be prepared, including:
-   - Randomly ordered lists.
-   - Lists sorted in ascending and descending order.
-   - Lists with all elements the same.
-   - Lists of different sizes, from small to large.
+1. **Generate Test Cases:** Various lists will be prepared to challenge the algorithm under varying conditions, including:
+   - Randomly ordered lists to test average-case scenarios.
+   - Lists sorted in ascending and descending order to test the algorithm's efficiency in best-case and worst-case scenarios.
+   - Lists with all elements the same to check how it handles uniform input.
+   - Lists of different sizes, from small to large, to observe scalability and performance trends.
 
-2. **Measure Performance:** The sorting algorithm will be used to sort these lists, measuring:
-   - Time taken to sort.
-   - Number of comparisons made, if possible.
+2. **Measure Performance:** The sorting algorithm will be used to sort these lists, with the aim of measuring:
+   - Time taken to sort each list, giving us insight on the algorithm's speed.
+   - Number of comparisons made during sorting, if possible to understand operational efficiency.
 
-3. **Analyze Results:** Performance across different lists and sizes will be analyzed to determine if:
-   - Time complexity appears to be $O(n)$.
-   - Performance degradation is observed with larger sizes, contradicting $O(n)$ complexity.
+3. **Analyze Results:** Performance across different lists and sizes will be analyzed to determine:
+   - If the time complexity aligns with the $O(n)$ claim, by observing whether sorting time increases linearly with list size.
+   - If there are any patterns of Performance degradation observed with larger list sizes, which would contradict the $O(n)$ complexity.
 
-4. **Benchmarking:** Performance will be compared against established algorithms (e.g., quicksort, mergesort) for context.
+4. **Benchmarking:** The algorithm's performance will be directly compared with well-known algorithms (e.g., quicksort, mergesort), providing a context-based reference point to understand the algorithm's efficiency and effectiveness by comparing it to algorithms widely used and understood.
 
-5. **Statistical Analysis:** We'll use a basic method called regression analysis to figure out if the sorting is as quick as they say it is by looking at the results from our tests.
+5. **Statistical Analysis:** We'll use a basic method called regression analysis to study how the time taken to sort a list changes with the list's size by looking at the results from our tests.
 
 ### Expected Results
 
-- Linear growth in sorting time with list size increase, without significant changes, would support the $O(n)$ claim.
-- Significant deviations would suggest the claim might not hold under all conditions.
+- If we see Linear growth in sorting time as the list size increases, without any significant changes, then it would support the $O(n)$ claim
+- On the other hand, Significant deviations (not following linear growth) would suggest the claim might not hold under all conditions.
 
 ## Theoretical Argument
 
-Given the established complexity bounds for comparison-based sorting algorithms, the claim of $O(n)$ time complexity for sorting arbitrary elements is examined closely by the following:
-
-- **Information-Based Lower Bound:** The minimum complexity for comparison-based sorting is $O(n log n)$, due to the many possible ways to arrange the items ($n!$ ways) and to sort them, we need to figure out the right way. Achieving sorting in fewer steps would contradict this lower bound, suggesting the algorithm either:
-  - Does not rely solely on comparisons.
+- In theory, the minimum complexity for comparison-based sorting is $O(n\ log n)$, due to the many possible ways to arrange the items ($n!$ ways) and to sort them, we need to figure out the correct order. Achieving sorting in fewer steps, faster than $O(n\ logn)$, would contradict this lower bound, suggesting the algorithm either:
+  - Does not rely solely on comparisons, perhaps takes advantage of specific patterns etc.
   - Or the claim is incorrect.
 
-To summarize, while the experimental approach can provide practical insights into the algorithm's performance, the theoretical framework of algorithmic design and algorithmic theory indicate that a comparison-based sorting algorithm achieving $O(n)$ time complexity for arbitrary datasets contradicts the established principles in algorithmic theory.
+To summarize, while testing can give us real data on how the algorithm performs, understanding the theory behind sorting tells us there are limits to how fast comparison-based sorting can be. So, an algorithm claiming to be $O(n)$ for all kinds of data is a big claim, that needs careful examination from both practical experiments and theoretical understanding to be proven.
 
 
