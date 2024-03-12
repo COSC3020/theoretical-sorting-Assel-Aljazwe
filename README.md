@@ -41,15 +41,12 @@ To empirically test the claim of an $O(n)$ comparison-based sorting algorithm, t
 4. **Benchmarking:** The algorithm's performance will be directly compared with well-known algorithms (e.g., quicksort, mergesort), providing a context-based reference point to understand the algorithm's efficiency and effectiveness by comparing it to algorithms widely used and understood.
 
 5. **Statistical Analysis:** We'll use a basic method called regression analysis to study how the time taken to sort a list changes with the list's size by looking at the results from our tests.
-
-### Expected Results
-
-- If we see Linear growth in sorting time as the list size increases, without any significant changes, then it would support the $O(n)$ claim
-- On the other hand, Significant deviations (not following linear growth) would suggest the claim might not hold under all conditions.
+    - **Expected Results for a $O(n)$ Complexity Claim**:
+   If the algorithm truly has a linear time complexity, the regression analysis should show a linear relationship between list size and sorting time. This means we would expect to see a straight line (or very close to straight) when plotting the list size against the sorting time, where the slope of the line shows the rate of increase in sorting time relative to the list size. Any significant deviation from this linear pattern might suggest that the algorithm does not consistently perform at $O(n)$ across all the tested scenarios.
 
 ## Theoretical Argument
 
-- In theory, the minimum complexity for comparison-based sorting is $O(n\ log n)$, due to the many possible ways to arrange the items ($n!$ ways) and to sort them, we need to figure out the correct order. Achieving sorting in fewer steps, faster than $O(n\ logn)$, would contradict this lower bound, suggesting the algorithm either:
+- In theory, the minimum complexity for comparison-based sorting is $Ω(n\ log n)$, due to the many possible ways to arrange the items ($n!$ ways) and to sort them, we need to figure out the correct order. Achieving sorting in fewer steps, faster than $Ω(n\ logn)$, would contradict this lower bound, suggesting the algorithm either:
   - Does not rely solely on comparisons, perhaps takes advantage of specific patterns etc.
   - Or the claim is incorrect.
 
